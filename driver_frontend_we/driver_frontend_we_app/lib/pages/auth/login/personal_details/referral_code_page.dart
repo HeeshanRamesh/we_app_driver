@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'referral_help_page.dart'; // Import ReferralHelpPage
+import '../document_upload/document_upload_page.dart';
+
 
 class ReferralCodePage extends StatefulWidget {
   const ReferralCodePage({super.key});
@@ -53,7 +56,12 @@ class _ReferralCodePageState extends State<ReferralCodePage> {
                           ),
                           IconButton(
                             icon: const Icon(Icons.help_outline, color: Colors.white),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const ReferralHelpPage()),
+                              );
+                            },
                           ),
                         ],
                       ),
@@ -81,7 +89,7 @@ class _ReferralCodePageState extends State<ReferralCodePage> {
             // Progress bar section
             Container(
               padding: EdgeInsets.symmetric(horizontal: padding, vertical: padding / 2),
-              color: const Color.fromARGB(255, 176, 163, 230), // Light orange background
+              color: const Color.fromARGB(255, 176, 163, 230), // Light purple background
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -137,7 +145,7 @@ class _ReferralCodePageState extends State<ReferralCodePage> {
                       SizedBox(height: padding),
                       Center(
                         child: Image.asset(
-                          'assets/we_Logo.png', // Bounce logo asset
+                          'assets/we_Logo.png', // Corrected to Bounce logo
                           height: logoHeight,
                         ),
                       ),
@@ -145,7 +153,7 @@ class _ReferralCodePageState extends State<ReferralCodePage> {
                       Container(
                         padding: EdgeInsets.all(padding),
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 176, 163, 230), // Light orange background
+                          color: const Color.fromARGB(255, 176, 163, 230), // Light purple background
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Column(
@@ -180,7 +188,12 @@ class _ReferralCodePageState extends State<ReferralCodePage> {
                       SizedBox(height: padding * 2),
                       Center(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => const DocumentUploadPage()),
+);
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color.fromARGB(255, 107, 81, 210), // We app theme purple
                             minimumSize: Size(screenWidth * 0.9, buttonHeight), // Responsive button size

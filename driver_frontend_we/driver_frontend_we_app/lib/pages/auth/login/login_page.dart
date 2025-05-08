@@ -121,7 +121,7 @@ class _LoginPageState extends State<LoginPage> {
                         'By proceeding, you are agreeing to our Terms and Conditions',
                         style: TextStyle(
                           fontSize: 12,
-                          color: Color(0xFFFF9800), // Orange text
+                          color: Color.fromARGB(255, 11, 11, 11), // Orange text
                         ),
                         textAlign: TextAlign.center,
                       ),
